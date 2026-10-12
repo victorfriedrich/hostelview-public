@@ -1,0 +1,15 @@
+{
+  "model": "typesafe/jev-1.13",
+  "method": "per-aspect least-squares line: human = slope * jev + intercept",
+  "fitted_on": "bachelorthesis ch5_rate runs (2026-09-19): 99 hostels in Amsterdam, Barcelona, Florence, Porto, Prague; human = mean Hostelworld sub-score (20-100 scaled to 0-1) over the same newest-110k-char review window",
+  "aspects": {
+    "cleanliness":     {"slope": 0.7411, "intercept": 0.3145, "n": 99, "r": 0.94},
+    "location":        {"slope": 0.5478, "intercept": 0.438,  "n": 99, "r": 0.84},
+    "staff":           {"slope": 0.7249, "intercept": 0.3011, "n": 99, "r": 0.95},
+    "atmosphere":      {"slope": 0.3895, "intercept": 0.562,  "n": 99, "r": 0.71},
+    "facilities":      {"slope": 0.8086, "intercept": 0.267,  "n": 99, "r": 0.91},
+    "security":        {"slope": 0.446,  "intercept": 0.6054, "n": 99, "r": 0.77},
+    "value_for_money": {"slope": 0.7147, "intercept": 0.3485, "n": 99, "r": 0.81},
+    "overall":         {"slope": 0.7703, "intercept": 0.2757, "n": 99, "r": 0.98}
+  }
+}

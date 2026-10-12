@@ -1,0 +1,16 @@
+# Only code goes into the image; data lives in Postgres.
+.venv
+.env
+.env.*
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+app/data
+app/prices
+app/cache
+app/embeddings
+app/*.ipynb
+app/*.html
+app/*.txt
+app/*.json
+!app/rating_calibration.json

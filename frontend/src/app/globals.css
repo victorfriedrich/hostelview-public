@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; }
+.app {
+  height: 100dvh;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+button, a { touch-action: manipulation; }
+
+/* ── Design tokens for the app's pages, light only ─── */
+.lux {
+  color-scheme: light;
+  --plane: #f4f5f7;
+  --surface: #ffffff;
+  --ink: #0b0b0b;
+  --ink-2: #4b5159;
+  --muted: #858b93;
+  --hair: #e4e7eb;
+  --axis: #c5cad1;
+  --wash: rgba(11, 13, 16, 0.035);
+  --sea: #1f5f7a;
+  --sea-soft: #8fb4c4;
+  --sun: #e0703a;
+  --jev: #1baf7a;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--plane);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  font-size: 16px;
+}
+
+.lux ::selection { background: color-mix(in oklab, var(--sea) 20%, transparent); }
+.lux .eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.lux .display { font-weight: 300; letter-spacing: -0.035em; line-height: 1.02; }
+.lux .card { min-width: 0; background: var(--surface); border: 1px solid var(--hair); border-radius: 6px; }
+.lux .num { font-variant-numeric: tabular-nums; }
+.lux .bar { height: 5px; border-radius: 999px; background: var(--hair); position: relative; }
+.lux .bar > .fill { height: 100%; border-radius: 999px; transition: width 1.1s var(--ease), background-color 0.4s ease; }
+.lux .rise { animation: lux-rise 0.8s var(--ease) both; }
+@keyframes lux-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+
+.lux button:focus-visible, .lux a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lux *, .lux *::before, .lux *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* Review history chart (HostelReviewChart): dragging selects a period, not the axis labels. */
+.review-chart svg text { user-select: none; -webkit-user-select: none; pointer-events: none; }

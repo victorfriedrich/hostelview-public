@@ -1,0 +1,21 @@
+# Local Postgres for development (make setup starts it). Port 54329 avoids clashing with a
+# Postgres already running on 5432.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hostelview
+      POSTGRES_DB: hostelview
+    ports:
+      - "54329:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d hostelview"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  pgdata:

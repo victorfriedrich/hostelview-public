@@ -1,0 +1,7 @@
+# API server (installed on Railway)
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+python-dotenv==1.2.3
+psycopg[binary]==3.3.6
+psycopg-pool==3.3.3
+numpy==2.5.3  # hostel graph walks and similarity (app/graph.py, app/similarity.py)

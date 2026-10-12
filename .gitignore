@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Secrets (the example file is documentation, not a secret)
+.env
+.env.*
+!.env.example
+
+# Claude Code session files
+.claude/

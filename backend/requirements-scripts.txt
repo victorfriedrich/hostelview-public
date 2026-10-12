@@ -1,0 +1,3 @@
+# LLM rating jobs (local use only)
+-r requirements.txt
+requests==2.34.2  # OpenRouter (app/ratings.py)

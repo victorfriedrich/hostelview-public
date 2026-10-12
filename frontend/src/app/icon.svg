@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .handle { stroke: #164b61; }
+    .body { fill: #164b61; }
+    @media (prefers-color-scheme: dark) {
+      .handle { stroke: #9cc7d8; }
+      .body { fill: #2d82a6; }
+    }
+  </style>
+  <path class="handle" d="M26.500 10V7.500a5.500 5.500 0 0 1 11 0V10" fill="none" stroke-width="5" stroke-linecap="round"/>
+  <path class="body" d="M7 33a25 25 0 0 1 50 0v24a6 6 0 0 1-6 6H13a6 6 0 0 1-6-6z"/>
+  <path d="M7 33a25 25 0 0 1 50 0v4c-7 5-15 7.500-25 7.500S14 42 7 37z" fill="#f5b13d"/>
+  <rect x="16" y="50" width="32" height="9" rx="4" fill="#d4e6ee"/>
+  <rect x="28.500" y="40" width="7" height="8" rx="2.500" fill="#f5b13d"/>
+</svg>
