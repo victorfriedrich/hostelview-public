@@ -4,8 +4,7 @@
 hostels you loved, and it finds the ones most like them in every city, with the optimal time to
 book.
 
-<!-- Demo video: drag hostelview-demo.mp4 into this spot in GitHub's README editor; GitHub
-     replaces this comment with the uploaded video's URL, which plays inline. -->
+https://github.com/user-attachments/assets/b9e7cd4f-66b4-47d8-8c18-135c9795a860
 
 | Path | What | Stack |
 | --- | --- | --- |
@@ -138,29 +137,3 @@ hosts shared dinners or organised activities.
   average. It falls between levels, and lands in the middle when the reviews are mixed.
 - **Calibration.** Where guests also give a score (cleanliness, staff, …), a linear fit maps the
   model's ratings onto the guest scale (`rating_calibration.json`, `calibrate_ratings.py`).
-
-Running these jobs needs an `OPENROUTER_API_KEY`.
-
-## Development
-
-Backend settings live in `backend/.env` (see `backend/.env.example`); the frontend reads the
-API's address from `NEXT_PUBLIC_BACKEND_URL` (default `http://localhost:8000`).
-
-### Database
-
-```bash
-cd backend
-.venv/bin/python -m app.db migrate   # apply pending app/migrations/NNN_*.sql
-.venv/bin/python -m app.db refresh   # recompute the materialized views
-```
-
-A migration runs once and is recorded in `schema_migrations`. Add changes as a new numbered
-file; never edit one that has been applied.
-
-### Deploying
-
-The API runs from `backend/Dockerfile` (code only; data lives in Postgres) with
-`python -m app.db migrate` as the pre-deploy command and `/health` as the health check. The web
-app is a standard Next.js build; set `NEXT_PUBLIC_BACKEND_URL` to the API's address and
-`NEXT_PUBLIC_SITE_URL` to the site's own address (for link previews). The live site runs at
-[hostelview.com](https://hostelview.com).
