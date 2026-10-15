@@ -4,7 +4,7 @@
 hostels you loved, and it finds the ones most like them in every city, with the optimal time to
 book.
 
-https://github.com/user-attachments/assets/b9e7cd4f-66b4-47d8-8c18-135c9795a860
+https://github.com/user-attachments/assets/7f7e3ef2-c4bc-41ae-996a-473b500f392a
 
 | Path | What | Stack |
 | --- | --- | --- |
